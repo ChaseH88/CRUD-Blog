@@ -1,0 +1,37 @@
+<% include ./partials/header %>
+
+<div class="pageTitle">
+    <div class="container">
+        <h1>Blog Application</h1>
+    </div>
+</div>
+
+<div class="homepage container">
+
+<% blogs.forEach(function(blog){ %>
+    <div class="blogEntry">
+        <div class="title">
+            <h2> <%= blog.title %> </h2>
+        </div>
+        <div class="content">
+            <div class="image">
+                <a href="/blogs/<%= blog._id %>">
+                    <img src="/<%= blog.image %>" />    
+                </a>
+            </div><!--image-->
+            <div class="text">
+                <div class="textTop">
+                    <p>Posted On: <em> <%= blog.created.toDateString() %> </em> </p>
+                    <p> <%- blog.body %> </p>
+                </div>
+                <div class="textBottom">
+                    <a class="ui blue button" href="/blogs/<%= blog._id %>"><span>Read More</span></a>
+                </div>
+            </div><!--text-->
+        </div>
+    </div>
+<% }); %>
+
+</div><!--container-->
+
+<% include ./partials/footer %>

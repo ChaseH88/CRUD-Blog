@@ -1,0 +1,52 @@
+h1, h2, h3, h4, h5, h6 {margin: 0;}
+
+#template {
+    margin: 45px 0 40px;
+}
+
+/*containers*/
+#template .container {max-width: 75%; margin: 0 auto;}
+#header .container {width: 75%; margin: 0 auto;}
+#footer .container {max-width: 75%; margin: 0 auto;}
+
+#template .container {margin-top: 40px;}
+#template .new.container {margin: 80px auto 40px;}
+#template .pageTitle .container {margin-top: 0;}
+
+i.icon {
+    font-size: 1.5em;
+}
+
+.container.main {
+    margin: 7em 0 0;
+}
+
+form#delete {
+    display: inline-block;
+}
+#blogEntry div.controls {
+    margin: 20px 0 0;
+}
+#blogEntry div.item > div.image {margin: 0 0 30px;}
+
+#footer {background: #1B1C1D; padding: 30px 0; text-align: center;}
+#footer p {color: #fff;}
+
+/* Home Blog Page */
+div.pageTitle {background: #eee; padding: 20px 0px; margin: 0 0 40px;}
+div.homepage div.blogEntry {padding: 20px; margin: 0 0 30px; border: 1px solid #e0dfdf;border-radius: 6px;box-shadow: 3px 3px 7px 1px rgba(238, 238, 238, 0.6);}
+div.homepage div.blogEntry div.title {margin: 0 0 20px;}
+div.homepage div.blogEntry div.content {display: flex;}
+div.homepage div.blogEntry div.content > div.image {flex: 1 33%; margin: 0 25px 0 0;}
+div.homepage div.blogEntry div.content > div.image img {max-width: 100%; border-radius: 6px; transition: opacity 250ms ease;}
+div.homepage div.blogEntry div.content > div.image img:hover {opacity: .6;}
+div.homepage div.blogEntry div.content > div.text {flex: 1 66%;display: flex;flex-direction: column;justify-content: space-between;}
+div.homepage div.blogEntry div.content > div.text div.textBottom {text-align: right;}
+
+/* Media Queries */
+@media screen and (max-width: 1024px){
+    #template .container {max-width: 100%; padding: 0 15px;}
+    div.homepage div.blogEntry div.content {flex-wrap: wrap;}
+    div.homepage div.blogEntry div.content > div.image {flex: 1 100%; text-align: center; padding: 0 0 20px;}
+    div.homepage div.blogEntry div.content > div.text {flex: 1 100%; text-align: left;}
+}

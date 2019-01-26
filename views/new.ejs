@@ -1,0 +1,29 @@
+<% include ./partials/header %>
+
+<div class="container new">
+
+<div class="ui main text container segment">
+    <div class="ui huge header">New Blog</div>
+    
+    <form class="ui form" action="/blogs" method="POST" enctype="multipart/form-data">
+        <div class="field">
+            <label>Title:</label>
+            <input required type="text" name="blog[title]" placeholder="Enter Title...">
+        </div>
+        <div class="field">
+            <label for="image">Image:</label>
+            <input required type="file" id="image" accept="image/*" name="blog[image]" placeholder="Enter Image URL...">
+        </div>
+        <div class="field">
+            <label>Blog Content:</label>
+            <textarea required name="blog[body]" placeholder="Enter Blog Content..."></textarea>
+        </div>
+        <input class="ui basic lg black button" type="submit">
+        <a class="ui basic lg black button" href="/">Cancel</a>
+    </form>
+    
+</div>
+
+</div><!--container
+
+<% include ./partials/footer %>
